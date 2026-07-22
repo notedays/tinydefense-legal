@@ -13,13 +13,31 @@
   th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; font-size: 0.95em; }
   th { background: #f3f3f3; }
   .meta { color: #666; font-size: 0.9em; }
-  hr { margin: 40px 0; border: none; border-top: 1px solid #ddd; }
   a { color: #1a5fb4; }
+  .langbar { position: sticky; top: 0; background: #fff; padding: 10px 0;
+             border-bottom: 1px solid #ddd; margin-bottom: 8px; z-index: 10;
+             display: flex; flex-wrap: wrap; gap: 6px; }
+  .langbar button { font: inherit; font-size: 0.9em; padding: 5px 11px; border: 1px solid #ccc;
+                    background: #f7f7f7; color: #333; border-radius: 6px; cursor: pointer; }
+  .langbar button.active { background: #1a5fb4; color: #fff; border-color: #1a5fb4; }
+  .doc + .doc { margin-top: 48px; }
 </style>
 </head>
 <body>
 
+<nav class="langbar" aria-label="Language">
+  <button type="button" data-target="ko">한국어</button>
+  <button type="button" data-target="en">English</button>
+  <button type="button" data-target="zh">中文</button>
+  <button type="button" data-target="ja">日本語</button>
+  <button type="button" data-target="de">Deutsch</button>
+  <button type="button" data-target="fr">Français</button>
+  <button type="button" data-target="es">Español</button>
+  <button type="button" data-target="ru">Русский</button>
+</nav>
+
 <!-- ===================== 한국어 ===================== -->
+<section class="doc" lang="ko" data-lang="ko">
 <h1>개인정보처리방침 — Tiny Defense</h1>
 <p class="meta">시행일: 2026년 7월 12일</p>
 
@@ -59,10 +77,10 @@
 
 <h2>7. 문의</h2>
 <p>개인정보 관련 문의: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
-
-<hr>
+</section>
 
 <!-- ===================== English ===================== -->
+<section class="doc" lang="en" data-lang="en">
 <h1>Privacy Policy — Tiny Defense</h1>
 <p class="meta">Effective date: July 12, 2026</p>
 
@@ -102,6 +120,298 @@
 
 <h2>7. Contact</h2>
 <p>For privacy inquiries: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== 中文（简体） ===================== -->
+<section class="doc" lang="zh-Hans" data-lang="zh">
+<h1>隐私政策 — Tiny Defense</h1>
+<p class="meta">生效日期：2026年7月12日</p>
+
+<p>本隐私政策说明 Tiny Defense（以下称"本游戏"）如何收集、使用和共享您的信息。本游戏无需注册账号或登录即可使用。</p>
+
+<h2>1. 我们收集的信息</h2>
+<p>为提供全球排行榜和云存档（进度同步）功能，本游戏通过 Unity Gaming Services（以下称"UGS"）收集并传输以下信息。所有数据均关联到匿名标识符进行处理；本游戏不收集您的姓名、电子邮件、电话号码或位置等敏感个人信息。</p>
+<table>
+  <tr><th>项目</th><th>说明</th><th>目的</th></tr>
+  <tr><td>匿名玩家 ID</td><td>UGS 自动签发的匿名标识符（不识别个人身份）</td><td>排行榜与云存档管理</td></tr>
+  <tr><td>昵称</td><td>您自行输入的显示名称（最多 12 个字符）</td><td>在排行榜上显示</td></tr>
+  <tr><td>游戏记录</td><td>您存活的夜晚（Wave）分数</td><td>排名计算</td></tr>
+  <tr><td>游戏进度数据</td><td>存档、元成长（"精灵刻印"）、最佳记录等进度信息</td><td>云存档；更换设备/重装时恢复</td></tr>
+  <tr><td>应用设置</td><td>音量（BGM/音效）、振动、省电、语言等偏好设置</td><td>设置同步</td></tr>
+  <tr><td>设备/安装标识符</td><td>用于运营 UGS 的技术性标识符</td><td>服务运营与防止滥用</td></tr>
+</table>
+<p>如果您不使用排行榜功能，您的昵称和分数不会被发送至排行榜；游戏进度和设置数据通过云存档功能进行同步。</p>
+<p>免费游玩时，本游戏通过 <strong>Google AdMob</strong> 展示插页广告。根据您的同意以及所在地区/平台，广告可能为<strong>个性化</strong>或<strong>非个性化</strong>。在 Android 上，若您已同意，可能会使用广告 ID 展示个性化广告；在 iOS 上，本游戏不请求跟踪许可（ATT），因此展示非个性化广告。在欧洲经济区（EEA）等适用地区，将依据启动时显示的 <strong>Google User Messaging Platform</strong> 同意界面中的选择。Google 可能会处理广告 ID 等设备标识符，用于投放和衡量广告、限制频次、防止无效活动，并在您同意时进行个性化。本游戏还提供非消耗型的 <strong>"移除广告"内购商品</strong>；付款通过 Google Play 和 App Store 处理。本游戏不会直接收集或存储银行卡等付款信息。</p>
+<p>您可以选择性地关联平台账号（Android：使用 Google Play 游戏登录；iOS：使用 Apple 登录），在这种情况下，该平台提供的标识符将用于恢复您的云存档数据。关联账号是可选的，不关联也可使用本游戏的全部功能。</p>
+
+<h2>2. 信息的共享</h2>
+<p>为提供排行榜和云存档功能，上述信息将被传输至我们的第三方服务提供商 <strong>Unity Technologies（Unity Gaming Services）</strong> 的服务器并存储。您提交的昵称和分数将通过排行榜公开显示给其他玩家。游戏进度和设置数据不会公开，仅用于恢复您本人的数据而存储。本游戏不会为其他任何目的（广告、营销、出售等）向第三方提供信息。</p>
+<p>Unity 隐私政策：<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a></p>
+<p>此外，为展示广告，<strong>Google（AdMob）</strong>会处理广告 ID 等设备信息，用于广告投放、衡量、防止滥用，并在您同意时进行个性化。Google 隐私政策：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+
+<h2>3. 数据安全</h2>
+<p>所有数据在传输过程中均经过加密（HTTPS）。</p>
+
+<h2>4. 数据删除请求</h2>
+<p>如果您希望删除自己的排行榜数据，可通过下方电子邮件提出请求，我们将在合理期限内处理。</p>
+
+<h2>5. 儿童隐私</h2>
+<p>本游戏并非面向 13 岁以下儿童，且不会有意收集儿童的个人信息。</p>
+
+<h2>6. 变更</h2>
+<p>我们可能会不时更新本政策，任何变更都将发布在本页面。</p>
+
+<h2>7. 联系方式</h2>
+<p>隐私相关咨询：<a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== 日本語 ===================== -->
+<section class="doc" lang="ja" data-lang="ja">
+<h1>プライバシーポリシー — Tiny Defense</h1>
+<p class="meta">施行日：2026年7月12日</p>
+
+<p>本プライバシーポリシーは、Tiny Defense（以下「本ゲーム」）が利用者の情報をどのように収集・利用・共有するかを説明します。本ゲームは、アカウント登録やログインなしでご利用いただけます。</p>
+
+<h2>1. 収集する情報</h2>
+<p>本ゲームは、グローバルランキング（順位表）とクラウドセーブ（進行の同期）機能を提供するため、Unity Gaming Services（以下「UGS」）を通じて以下の情報を収集・送信します。すべてのデータは匿名の識別子に紐づけて処理され、氏名・メールアドレス・電話番号・位置情報など個人を特定する機微な情報は収集しません。</p>
+<table>
+  <tr><th>項目</th><th>内容</th><th>目的</th></tr>
+  <tr><td>匿名プレイヤーID</td><td>UGSが自動発行する匿名の識別子（個人を特定しません）</td><td>ランキング・クラウドセーブの管理</td></tr>
+  <tr><td>ニックネーム</td><td>ご自身で入力した表示名（最大12文字）</td><td>ランキングに表示</td></tr>
+  <tr><td>ゲーム記録</td><td>生き延びた夜（Wave）のスコア</td><td>順位の算定</td></tr>
+  <tr><td>ゲーム進行データ</td><td>セーブ、メタ成長（「精霊の刻印」）、最高記録などの進行情報</td><td>クラウドセーブ、機種変更・再インストール時の復元</td></tr>
+  <tr><td>アプリ設定</td><td>音量（BGM/効果音）、バイブレーション、バッテリー節約、言語などの設定値</td><td>設定の同期</td></tr>
+  <tr><td>端末/インストール識別子</td><td>UGSの運用に用いる技術的な識別子</td><td>サービス運用・不正利用の防止</td></tr>
+</table>
+<p>ランキング機能を利用しない場合、ニックネームとスコアは順位表に送信されません。ゲームの進行・設定データはクラウドセーブ機能を通じて同期されます。</p>
+<p>無料でプレイする場合、本ゲームは <strong>Google AdMob</strong> を通じてインタースティシャル広告を表示します。広告は、利用者の同意および地域・プラットフォームに応じて、<strong>パーソナライズ（個人向け）</strong>または<strong>パーソナライズなし</strong>で提供されます。Android では同意した場合に広告IDを用いたパーソナライズ広告が表示されることがあり、iOS ではトラッキング許可（ATT）を求めないため、パーソナライズなしの広告が表示されます。欧州経済領域（EEA）などの該当地域では、起動時に表示される <strong>Google User Messaging Platform</strong> の同意画面での選択に従います。Google は、広告の配信・測定・フリークエンシー制限・不正防止、および（同意がある場合の）パーソナライズのために、広告IDなどの端末識別子を処理することがあります。また、広告を消す <strong>「広告除去」アプリ内商品</strong>（非消費型）を提供しており、決済は Google Play・App Store を通じて処理されます。本ゲームは、クレジットカードなどの決済情報を直接収集・保存しません。</p>
+<p>利用者は任意でプラットフォームアカウント（Android：Google Play ゲームでログイン、iOS：Apple でサインイン）を連携でき、その場合、当該プラットフォームが提供する識別子をクラウドセーブデータの復元に使用します。アカウント連携は任意であり、連携しなくても本ゲームのすべての機能をご利用いただけます。</p>
+
+<h2>2. 情報の共有</h2>
+<p>上記の情報は、ランキング・クラウドセーブ機能を提供するため、第三者サービス提供者である <strong>Unity Technologies（Unity Gaming Services）</strong> のサーバーへ送信・保存されます。利用者が入力したニックネームとスコアは、順位表を通じて他の利用者に公開的に表示されます。ゲームの進行・設定データは公開されず、当該利用者の復元のためにのみ保存されます。本ゲームは、これ以外の目的（広告・マーケティング・販売など）で情報を第三者に提供しません。</p>
+<p>Unity のプライバシーポリシー：<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a></p>
+<p>また、広告表示のため、<strong>Google（AdMob）</strong>は広告の配信・測定・不正防止、および（同意がある場合の）パーソナライズのために、広告IDなどの端末情報を処理します。Google のプライバシーポリシー：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+
+<h2>3. データのセキュリティ</h2>
+<p>すべてのデータは通信区間で暗号化（HTTPS）して送信されます。</p>
+
+<h2>4. データ削除のご請求</h2>
+<p>順位表データの削除をご希望の場合は、下記のメールアドレスへご請求いただければ、合理的な期間内に対応します。</p>
+
+<h2>5. 児童のプライバシー</h2>
+<p>本ゲームは13歳未満の児童を対象としておらず、児童の個人情報を意図的に収集しません。</p>
+
+<h2>6. 変更</h2>
+<p>本方針は必要に応じて改定されることがあり、変更の際は本ページに掲載します。</p>
+
+<h2>7. お問い合わせ</h2>
+<p>個人情報に関するお問い合わせ：<a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== Deutsch ===================== -->
+<section class="doc" lang="de" data-lang="de">
+<h1>Datenschutzerklärung — Tiny Defense</h1>
+<p class="meta">Gültig ab: 12. Juli 2026</p>
+
+<p>Diese Datenschutzerklärung erläutert, wie Tiny Defense (das „Spiel") Ihre Informationen erhebt, nutzt und weitergibt. Das Spiel kann ohne Erstellung eines Kontos oder Anmeldung gespielt werden.</p>
+
+<h2>1. Erhobene Informationen</h2>
+<p>Um die globale Bestenliste und den Cloud-Speicher (Fortschrittssynchronisierung) bereitzustellen, erhebt und übermittelt das Spiel die folgenden Informationen über Unity Gaming Services („UGS"). Alle Daten werden einem anonymen Bezeichner zugeordnet verarbeitet; das Spiel erhebt keine sensiblen personenbezogenen Daten wie Name, E-Mail-Adresse, Telefonnummer oder Standort.</p>
+<table>
+  <tr><th>Element</th><th>Beschreibung</th><th>Zweck</th></tr>
+  <tr><td>Anonyme Spieler-ID</td><td>Ein von UGS automatisch vergebener anonymer Bezeichner (identifiziert Sie nicht persönlich)</td><td>Verwaltung von Bestenliste und Cloud-Speicher</td></tr>
+  <tr><td>Spitzname</td><td>Ein von Ihnen selbst eingegebener Anzeigename (bis zu 12 Zeichen)</td><td>Anzeige in der Bestenliste</td></tr>
+  <tr><td>Spielergebnis</td><td>Ihre Punktzahl für überlebte Nächte (Wellen)</td><td>Ranglistenberechnung</td></tr>
+  <tr><td>Spielfortschrittsdaten</td><td>Spielstand, Meta-Fortschritt („Geistersiegel"), Bestleistung und weitere Fortschrittsdaten</td><td>Cloud-Speicher; Wiederherstellung bei Gerätewechsel/Neuinstallation</td></tr>
+  <tr><td>App-Einstellungen</td><td>Lautstärke (Musik/Effekte), Vibration, Energiesparmodus, Sprache und weitere Einstellungen</td><td>Synchronisierung der Einstellungen</td></tr>
+  <tr><td>Geräte-/Installationskennung</td><td>Eine technische Kennung zum Betrieb von UGS</td><td>Dienstbetrieb und Missbrauchsprävention</td></tr>
+</table>
+<p>Wenn Sie die Bestenliste nicht nutzen, werden Ihr Spitzname und Ihre Punktzahl nicht an die Bestenliste gesendet; Spielfortschritt und Einstellungen werden über die Cloud-Speicherfunktion synchronisiert.</p>
+<p>Beim kostenlosen Spielen zeigt das Spiel über <strong>Google AdMob</strong> Interstitial-Werbung an. Je nach Ihrer Einwilligung und Ihrer Region/Plattform kann Werbung <strong>personalisiert</strong> oder <strong>nicht personalisiert</strong> sein. Auf Android kann personalisierte Werbung unter Verwendung einer Werbe-ID ausgeliefert werden, sofern Sie eingewilligt haben; auf iOS fordert das Spiel kein Tracking (ATT) an, sodass nicht personalisierte Werbung ausgeliefert wird. Im Europäischen Wirtschaftsraum (EWR) und anderen einschlägigen Regionen richtet sich dies nach Ihrer Auswahl auf dem beim Start angezeigten Einwilligungsbildschirm der <strong>Google User Messaging Platform</strong>. Google kann Gerätekennungen wie die Werbe-ID verarbeiten, um Werbung auszuliefern und zu messen, die Häufigkeit zu begrenzen, ungültige Aktivitäten zu verhindern und (mit Einwilligung) Werbung zu personalisieren. Das Spiel bietet außerdem ein nicht verbrauchbares <strong>In-App-Produkt „Werbung entfernen"</strong> an; Zahlungen werden über Google Play und den App Store abgewickelt. Das Spiel erhebt oder speichert keine Zahlungsdaten wie Kartendaten direkt.</p>
+<p>Sie können optional ein Plattformkonto verknüpfen (Android: Anmeldung mit Google Play Games; iOS: Anmelden mit Apple); in diesem Fall wird die von dieser Plattform bereitgestellte Kennung zur Wiederherstellung Ihrer Cloud-Speicherdaten verwendet. Die Kontoverknüpfung ist optional, und alle Funktionen bleiben auch ohne sie verfügbar.</p>
+
+<h2>2. Weitergabe von Informationen</h2>
+<p>Die vorstehenden Informationen werden zur Bereitstellung von Bestenliste und Cloud-Speicher an die Server unseres Drittanbieters <strong>Unity Technologies (Unity Gaming Services)</strong> übermittelt und dort gespeichert. Der von Ihnen eingegebene Spitzname und Ihre Punktzahl werden anderen Spielern über die Bestenliste öffentlich angezeigt. Spielfortschritt und Einstellungen werden nicht veröffentlicht und ausschließlich zur Wiederherstellung Ihrer eigenen Daten gespeichert. Das Spiel gibt Informationen zu keinem anderen Zweck (Werbung, Marketing, Verkauf usw.) an Dritte weiter.</p>
+<p>Datenschutzerklärung von Unity: <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a></p>
+<p>Zur Anzeige von Werbung verarbeitet <strong>Google (AdMob)</strong> zudem Geräteinformationen wie die Werbe-ID zwecks Auslieferung und Messung von Werbung, Missbrauchsprävention und (mit Einwilligung) Personalisierung. Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+
+<h2>3. Datensicherheit</h2>
+<p>Alle Daten werden bei der Übertragung verschlüsselt (HTTPS).</p>
+
+<h2>4. Anträge auf Datenlöschung</h2>
+<p>Wenn Sie Ihre Bestenlisten-Daten löschen möchten, können Sie dies unter der unten stehenden E-Mail-Adresse beantragen; wir bearbeiten die Anfrage innerhalb eines angemessenen Zeitraums.</p>
+
+<h2>5. Datenschutz für Kinder</h2>
+<p>Das Spiel richtet sich nicht an Kinder unter 13 Jahren und erhebt wissentlich keine personenbezogenen Daten von Kindern.</p>
+
+<h2>6. Änderungen</h2>
+<p>Wir können diese Erklärung von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite veröffentlicht.</p>
+
+<h2>7. Kontakt</h2>
+<p>Anfragen zum Datenschutz: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== Français ===================== -->
+<section class="doc" lang="fr" data-lang="fr">
+<h1>Politique de confidentialité — Tiny Defense</h1>
+<p class="meta">Date d'effet : 12 juillet 2026</p>
+
+<p>La présente politique de confidentialité explique comment Tiny Defense (le « Jeu ») collecte, utilise et partage vos informations. Le Jeu peut être utilisé sans créer de compte ni se connecter.</p>
+
+<h2>1. Informations que nous collectons</h2>
+<p>Pour fournir le classement mondial et la sauvegarde cloud (synchronisation de la progression), le Jeu collecte et transmet les informations suivantes via Unity Gaming Services (« UGS »). Toutes les données sont traitées en association avec un identifiant anonyme ; le Jeu ne collecte pas d'informations personnelles sensibles telles que votre nom, votre e-mail, votre numéro de téléphone ou votre localisation.</p>
+<table>
+  <tr><th>Élément</th><th>Description</th><th>Finalité</th></tr>
+  <tr><td>Identifiant de joueur anonyme</td><td>Un identifiant anonyme attribué automatiquement par UGS (ne vous identifie pas personnellement)</td><td>Gestion du classement et de la sauvegarde cloud</td></tr>
+  <tr><td>Pseudo</td><td>Un nom d'affichage que vous saisissez vous-même (jusqu'à 12 caractères)</td><td>Affichage dans le classement</td></tr>
+  <tr><td>Score de jeu</td><td>Votre score de nuits survécues (vagues)</td><td>Établissement du classement</td></tr>
+  <tr><td>Données de progression</td><td>Sauvegarde, progression méta (« Sceaux de l'esprit »), meilleur score et autres informations de progression</td><td>Sauvegarde cloud ; restauration lors d'un changement d'appareil/réinstallation</td></tr>
+  <tr><td>Paramètres de l'application</td><td>Volume (musique/effets), vibration, économie de batterie, langue et autres préférences</td><td>Synchronisation des paramètres</td></tr>
+  <tr><td>Identifiant d'appareil/d'installation</td><td>Un identifiant technique utilisé pour exploiter UGS</td><td>Exploitation du service et prévention des abus</td></tr>
+</table>
+<p>Si vous n'utilisez pas le classement, votre pseudo et votre score ne sont pas envoyés au classement ; la progression et les paramètres du jeu sont synchronisés via la fonction de sauvegarde cloud.</p>
+<p>Lorsqu'il est joué gratuitement, le Jeu affiche des annonces interstitielles via <strong>Google AdMob</strong>. Selon votre consentement et votre région/plateforme, les annonces peuvent être <strong>personnalisées</strong> ou <strong>non personnalisées</strong>. Sur Android, des annonces personnalisées utilisant un identifiant publicitaire peuvent être diffusées si vous y avez consenti ; sur iOS, le Jeu ne demande pas de suivi (ATT), de sorte que les annonces sont non personnalisées. Dans l'Espace économique européen (EEE) et les autres régions concernées, cela dépend de votre choix sur l'écran de consentement <strong>Google User Messaging Platform</strong> affiché au lancement. Google peut traiter des identifiants d'appareil tels que l'identifiant publicitaire pour diffuser et mesurer les annonces, limiter leur fréquence, prévenir les activités frauduleuses et (avec consentement) personnaliser les annonces. Le Jeu propose également un <strong>produit intégré non consommable « Supprimer les publicités »</strong> ; les paiements sont traités par Google Play et l'App Store. Le Jeu ne collecte ni ne stocke directement d'informations de paiement telles que les données de carte.</p>
+<p>Vous pouvez éventuellement associer un compte de plateforme (Android : Se connecter avec Google Play Jeux ; iOS : Se connecter avec Apple) ; dans ce cas, l'identifiant fourni par cette plateforme est utilisé pour restaurer vos données de sauvegarde cloud. L'association d'un compte est facultative et toutes les fonctionnalités restent disponibles sans elle.</p>
+
+<h2>2. Partage des informations</h2>
+<p>Les informations ci-dessus sont transmises et stockées sur les serveurs de notre prestataire tiers <strong>Unity Technologies (Unity Gaming Services)</strong> afin de fournir le classement et la sauvegarde cloud. Le pseudo et le score que vous soumettez sont affichés publiquement aux autres joueurs via le classement. La progression et les paramètres du jeu ne sont pas rendus publics et sont stockés uniquement pour restaurer vos propres données. Le Jeu ne partage pas d'informations avec des tiers à d'autres fins (publicité, marketing, vente, etc.).</p>
+<p>Politique de confidentialité d'Unity : <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a></p>
+<p>En outre, pour afficher des annonces, <strong>Google (AdMob)</strong> traite des informations d'appareil telles que l'identifiant publicitaire à des fins de diffusion, de mesure, de prévention de la fraude et (avec consentement) de personnalisation. Politique de confidentialité de Google : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+
+<h2>3. Sécurité des données</h2>
+<p>Toutes les données sont chiffrées en transit (HTTPS).</p>
+
+<h2>4. Demandes de suppression des données</h2>
+<p>Si vous souhaitez supprimer vos données de classement, vous pouvez en faire la demande à l'adresse e-mail ci-dessous ; nous la traiterons dans un délai raisonnable.</p>
+
+<h2>5. Confidentialité des enfants</h2>
+<p>Le Jeu ne s'adresse pas aux enfants de moins de 13 ans et ne collecte pas sciemment de données personnelles les concernant.</p>
+
+<h2>6. Modifications</h2>
+<p>Nous pouvons mettre à jour la présente politique de temps à autre. Toute modification sera publiée sur cette page.</p>
+
+<h2>7. Contact</h2>
+<p>Pour toute question relative à la confidentialité : <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== Español ===================== -->
+<section class="doc" lang="es" data-lang="es">
+<h1>Política de privacidad — Tiny Defense</h1>
+<p class="meta">Fecha de entrada en vigor: 12 de julio de 2026</p>
+
+<p>Esta política de privacidad explica cómo Tiny Defense (el «Juego») recopila, usa y comparte su información. El Juego puede utilizarse sin crear una cuenta ni iniciar sesión.</p>
+
+<h2>1. Información que recopilamos</h2>
+<p>Para ofrecer la clasificación global y el guardado en la nube (sincronización del progreso), el Juego recopila y transmite la siguiente información a través de Unity Gaming Services («UGS»). Todos los datos se tratan asociados a un identificador anónimo; el Juego no recopila información personal sensible como su nombre, correo electrónico, número de teléfono o ubicación.</p>
+<table>
+  <tr><th>Elemento</th><th>Descripción</th><th>Finalidad</th></tr>
+  <tr><td>ID de jugador anónimo</td><td>Un identificador anónimo emitido automáticamente por UGS (no lo identifica personalmente)</td><td>Gestión de la clasificación y el guardado en la nube</td></tr>
+  <tr><td>Apodo</td><td>Un nombre visible que introduce usted mismo (hasta 12 caracteres)</td><td>Mostrado en la clasificación</td></tr>
+  <tr><td>Registro de juego</td><td>Su puntuación de noches sobrevividas (oleadas)</td><td>Cálculo de la clasificación</td></tr>
+  <tr><td>Datos de progreso</td><td>Partida guardada, progreso meta («Marcas del espíritu»), mejor registro y otra información de progreso</td><td>Guardado en la nube; restauración al cambiar de dispositivo/reinstalar</td></tr>
+  <tr><td>Ajustes de la aplicación</td><td>Volumen (música/efectos), vibración, ahorro de batería, idioma y otras preferencias</td><td>Sincronización de ajustes</td></tr>
+  <tr><td>Identificador de dispositivo/instalación</td><td>Un identificador técnico utilizado para operar UGS</td><td>Operación del servicio y prevención de abusos</td></tr>
+</table>
+<p>Si no utiliza la clasificación, su apodo y su puntuación no se envían a la clasificación; el progreso y los ajustes del juego se sincronizan mediante la función de guardado en la nube.</p>
+<p>Cuando se juega de forma gratuita, el Juego muestra anuncios intersticiales a través de <strong>Google AdMob</strong>. Según su consentimiento y su región/plataforma, los anuncios pueden ser <strong>personalizados</strong> o <strong>no personalizados</strong>. En Android pueden mostrarse anuncios personalizados que utilizan un identificador de publicidad cuando usted lo haya consentido; en iOS, el Juego no solicita seguimiento (ATT), por lo que los anuncios son no personalizados. En el Espacio Económico Europeo (EEE) y otras regiones aplicables, esto depende de su elección en la pantalla de consentimiento de <strong>Google User Messaging Platform</strong> que se muestra al iniciar. Google puede tratar identificadores del dispositivo, como el identificador de publicidad, para mostrar y medir anuncios, limitar su frecuencia, prevenir actividades no válidas y (con su consentimiento) personalizarlos. El Juego también ofrece un <strong>producto de compra integrada no consumible «Eliminar anuncios»</strong>; los pagos se procesan a través de Google Play y App Store. El Juego no recopila ni almacena directamente información de pago como los datos de la tarjeta.</p>
+<p>Puede vincular opcionalmente una cuenta de plataforma (Android: Iniciar sesión con Google Play Juegos; iOS: Iniciar sesión con Apple); en ese caso, el identificador proporcionado por esa plataforma se utiliza para restaurar sus datos de guardado en la nube. Vincular una cuenta es opcional y todas las funciones siguen disponibles sin ello.</p>
+
+<h2>2. Cómo compartimos la información</h2>
+<p>La información anterior se transmite y almacena en los servidores de nuestro proveedor externo <strong>Unity Technologies (Unity Gaming Services)</strong> para ofrecer la clasificación y el guardado en la nube. El apodo y la puntuación que usted envía se muestran públicamente a otros jugadores a través de la clasificación. El progreso y los ajustes del juego no se hacen públicos y se almacenan únicamente para restaurar sus propios datos. El Juego no comparte información con terceros para ningún otro fin (publicidad, marketing, venta, etc.).</p>
+<p>Política de privacidad de Unity: <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a></p>
+<p>Además, para mostrar anuncios, <strong>Google (AdMob)</strong> trata información del dispositivo, como el identificador de publicidad, con fines de publicación, medición, prevención de fraude y (con su consentimiento) personalización. Política de privacidad de Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+
+<h2>3. Seguridad de los datos</h2>
+<p>Todos los datos se cifran en tránsito (HTTPS).</p>
+
+<h2>4. Solicitudes de eliminación de datos</h2>
+<p>Si desea eliminar sus datos de clasificación, puede solicitarlo en el correo electrónico que figura a continuación y lo tramitaremos en un plazo razonable.</p>
+
+<h2>5. Privacidad de los menores</h2>
+<p>El Juego no está dirigido a menores de 13 años y no recopila conscientemente información personal de menores.</p>
+
+<h2>6. Cambios</h2>
+<p>Podemos actualizar esta política ocasionalmente. Cualquier cambio se publicará en esta página.</p>
+
+<h2>7. Contacto</h2>
+<p>Consultas sobre privacidad: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== Русский ===================== -->
+<section class="doc" lang="ru" data-lang="ru">
+<h1>Политика конфиденциальности — Tiny Defense</h1>
+<p class="meta">Дата вступления в силу: 12 июля 2026 г.</p>
+
+<p>Настоящая политика конфиденциальности объясняет, как Tiny Defense («Игра») собирает, использует и передаёт вашу информацию. В Игру можно играть без создания учётной записи и входа в систему.</p>
+
+<h2>1. Собираемая информация</h2>
+<p>Для работы глобальной таблицы лидеров и облачного сохранения (синхронизации прогресса) Игра собирает и передаёт следующую информацию через Unity Gaming Services («UGS»). Все данные обрабатываются в привязке к анонимному идентификатору; Игра не собирает конфиденциальные персональные данные, такие как ваше имя, адрес электронной почты, номер телефона или местоположение.</p>
+<table>
+  <tr><th>Данные</th><th>Описание</th><th>Цель</th></tr>
+  <tr><td>Анонимный идентификатор игрока</td><td>Анонимный идентификатор, автоматически выдаваемый UGS (не идентифицирует вас лично)</td><td>Управление таблицей лидеров и облачным сохранением</td></tr>
+  <tr><td>Никнейм</td><td>Отображаемое имя, которое вы вводите сами (до 12 символов)</td><td>Отображение в таблице лидеров</td></tr>
+  <tr><td>Игровой результат</td><td>Ваш счёт пережитых ночей (волн)</td><td>Подсчёт рейтинга</td></tr>
+  <tr><td>Данные прогресса</td><td>Сохранение, мета-прогресс («Печати духа»), лучший результат и другие данные прогресса</td><td>Облачное сохранение; восстановление при смене устройства/переустановке</td></tr>
+  <tr><td>Настройки приложения</td><td>Громкость (музыка/эффекты), вибрация, энергосбережение, язык и другие настройки</td><td>Синхронизация настроек</td></tr>
+  <tr><td>Идентификатор устройства/установки</td><td>Технический идентификатор для работы UGS</td><td>Работа сервиса и предотвращение злоупотреблений</td></tr>
+</table>
+<p>Если вы не пользуетесь таблицей лидеров, ваш никнейм и счёт не отправляются в неё; прогресс и настройки игры синхронизируются через функцию облачного сохранения.</p>
+<p>При бесплатной игре Игра показывает межстраничную рекламу через <strong>Google AdMob</strong>. В зависимости от вашего согласия и региона/платформы реклама может быть <strong>персонализированной</strong> или <strong>неперсонализированной</strong>. На Android персонализированная реклама с использованием рекламного идентификатора может показываться при вашем согласии; на iOS Игра не запрашивает разрешение на отслеживание (ATT), поэтому реклама неперсонализированная. В Европейской экономической зоне (ЕЭЗ) и других применимых регионах это определяется вашим выбором на экране согласия <strong>Google User Messaging Platform</strong>, отображаемом при запуске. Google может обрабатывать идентификаторы устройства, такие как рекламный идентификатор, для показа и оценки рекламы, ограничения частоты, предотвращения недобросовестных действий и (с согласия) персонализации. Игра также предлагает непотребляемый <strong>встроенный продукт «Убрать рекламу»</strong>; платежи обрабатываются через Google Play и App Store. Игра не собирает и не хранит платёжные данные, такие как данные карты, напрямую.</p>
+<p>При желании вы можете привязать учётную запись платформы (Android: вход через Google Play Игры; iOS: вход через Apple); в этом случае предоставляемый этой платформой идентификатор используется для восстановления данных облачного сохранения. Привязка учётной записи необязательна, и все функции доступны без неё.</p>
+
+<h2>2. Передача информации</h2>
+<p>Указанная выше информация передаётся и хранится на серверах нашего стороннего поставщика услуг <strong>Unity Technologies (Unity Gaming Services)</strong> для работы таблицы лидеров и облачного сохранения. Введённые вами никнейм и счёт публично отображаются другим игрокам в таблице лидеров. Прогресс и настройки игры не публикуются и хранятся исключительно для восстановления ваших собственных данных. Игра не передаёт информацию третьим лицам в каких-либо иных целях (реклама, маркетинг, продажа и т. п.).</p>
+<p>Политика конфиденциальности Unity: <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a></p>
+<p>Кроме того, для показа рекламы <strong>Google (AdMob)</strong> обрабатывает информацию об устройстве, такую как рекламный идентификатор, в целях показа и оценки рекламы, предотвращения злоупотреблений и (с согласия) персонализации. Политика конфиденциальности Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+
+<h2>3. Безопасность данных</h2>
+<p>Все данные шифруются при передаче (HTTPS).</p>
+
+<h2>4. Запросы на удаление данных</h2>
+<p>Если вы хотите удалить свои данные из таблицы лидеров, вы можете направить запрос на указанный ниже адрес электронной почты, и мы обработаем его в разумный срок.</p>
+
+<h2>5. Конфиденциальность детей</h2>
+<p>Игра не предназначена для детей младше 13 лет и не собирает сознательно их персональные данные.</p>
+
+<h2>6. Изменения</h2>
+<p>Мы можем время от времени обновлять эту политику. Любые изменения публикуются на этой странице.</p>
+
+<h2>7. Контакты</h2>
+<p>По вопросам конфиденциальности: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<script>
+(function () {
+  var langs = ["ko", "en", "zh", "ja", "de", "fr", "es", "ru"];
+  function show(code) {
+    langs.forEach(function (l) {
+      var sec = document.querySelector('section[data-lang="' + l + '"]');
+      var btn = document.querySelector('button[data-target="' + l + '"]');
+      if (sec) sec.style.display = (l === code) ? "block" : "none";
+      if (btn) btn.classList.toggle("active", l === code);
+    });
+    try { localStorage.setItem("td_legal_lang", code); } catch (e) {}
+  }
+  function pick() {
+    try {
+      var saved = localStorage.getItem("td_legal_lang");
+      if (saved && langs.indexOf(saved) >= 0) return saved;
+    } catch (e) {}
+    var nav = (navigator.language || "en").toLowerCase();
+    for (var i = 0; i < langs.length; i++) {
+      if (nav.indexOf(langs[i]) === 0) return langs[i];
+    }
+    return "en";
+  }
+  var buttons = document.querySelectorAll(".langbar button");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      show(this.getAttribute("data-target"));
+    });
+  }
+  show(pick());
+})();
+</script>
 
 </body>
 </html>

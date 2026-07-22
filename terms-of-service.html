@@ -10,13 +10,31 @@
   h1 { font-size: 1.6em; border-bottom: 2px solid #444; padding-bottom: 8px; }
   h2 { margin-top: 1.6em; font-size: 1.2em; }
   .meta { color: #666; font-size: 0.9em; }
-  hr { margin: 40px 0; border: none; border-top: 1px solid #ddd; }
   a { color: #1a5fb4; }
+  .langbar { position: sticky; top: 0; background: #fff; padding: 10px 0;
+             border-bottom: 1px solid #ddd; margin-bottom: 8px; z-index: 10;
+             display: flex; flex-wrap: wrap; gap: 6px; }
+  .langbar button { font: inherit; font-size: 0.9em; padding: 5px 11px; border: 1px solid #ccc;
+                    background: #f7f7f7; color: #333; border-radius: 6px; cursor: pointer; }
+  .langbar button.active { background: #1a5fb4; color: #fff; border-color: #1a5fb4; }
+  .doc + .doc { margin-top: 48px; }
 </style>
 </head>
 <body>
 
+<nav class="langbar" aria-label="Language">
+  <button type="button" data-target="ko">한국어</button>
+  <button type="button" data-target="en">English</button>
+  <button type="button" data-target="zh">中文</button>
+  <button type="button" data-target="ja">日本語</button>
+  <button type="button" data-target="de">Deutsch</button>
+  <button type="button" data-target="fr">Français</button>
+  <button type="button" data-target="es">Español</button>
+  <button type="button" data-target="ru">Русский</button>
+</nav>
+
 <!-- ===================== 한국어 ===================== -->
+<section class="doc" lang="ko" data-lang="ko">
 <h1>이용약관 — Tiny Defense</h1>
 <p class="meta">시행일: 2026년 7월 20일</p>
 
@@ -59,10 +77,10 @@
 
 <h2>11. 문의</h2>
 <p>문의: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
-
-<hr>
+</section>
 
 <!-- ===================== English ===================== -->
+<section class="doc" lang="en" data-lang="en">
 <h1>Terms of Service — Tiny Defense</h1>
 <p class="meta">Effective date: July 20, 2026</p>
 
@@ -105,6 +123,316 @@
 
 <h2>11. Contact</h2>
 <p>Contact: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== 中文（简体） ===================== -->
+<section class="doc" lang="zh-Hans" data-lang="zh">
+<h1>使用条款 — Tiny Defense</h1>
+<p class="meta">生效日期：2026年7月20日</p>
+
+<p>本使用条款（以下称"条款"）规定了用户与 Tiny Defense（以下称"本游戏"）提供者 OneStep（以下称"公司"）之间关于使用本游戏的条件。通过安装或运行本游戏，即视为用户同意本条款。如不同意，请勿使用本游戏。</p>
+
+<h2>1. 使用许可</h2>
+<p>公司授予用户一项不可转让、非独占的许可，允许用户出于个人、非商业目的使用本游戏。用户无需注册账号即可使用本游戏。</p>
+
+<h2>2. 禁止行为</h2>
+<p>用户不得进行以下行为：</p>
+<ul>
+  <li>对本游戏进行反编译、逆向工程、提取源代码，或未经授权复制、分发、制作衍生作品；</li>
+  <li>使用作弊、宏、漏洞利用，或以其他方式干扰正常运行或不正当地操纵排行榜排名；</li>
+  <li>侵犯他人权利或违反适用法律。</li>
+</ul>
+
+<h2>3. 用户内容（昵称）</h2>
+<p>您为排行榜显示而输入的昵称将公开显示给其他玩家。您不得使用不当昵称（脏话、诽谤、仇恨、冒充他人、广告等）。公司可在不事先通知的情况下修改或删除其认为不当的昵称或记录。</p>
+
+<h2>4. 广告与应用内购买</h2>
+<p>本游戏免费提供，并通过 Google AdMob 展示广告。用户可购买非消耗型的"移除广告"内购商品以移除广告。所有付款均通过 Google Play 或 App Store 处理，退款或取消遵循相应商店的政策。内购商品仅供游戏内使用，不具有现金或实物价值。</p>
+
+<h2>5. 游戏数据</h2>
+<p>本游戏的进度数据和设置可通过云存档（同步）功能保存。用户可随时通过游戏内设置界面的"删除数据"功能删除本人的云端及设备存储数据。有关数据的收集与使用，适用<a href="privacy-policy.html">隐私政策</a>。</p>
+
+<h2>6. 知识产权</h2>
+<p>本游戏及其所含图形、声音、代码、商标等一切知识产权，归属于公司或其正当权利人。除上述许可外，本条款不向用户转让任何权利。</p>
+
+<h2>7. 服务的变更与中止</h2>
+<p>公司可对本游戏内容进行改进或变更，并可根据运营或技术上的需要，变更或中止其在线功能（排行榜、云存档等）的全部或部分。</p>
+
+<h2>8. 免责声明与责任限制</h2>
+<p>本游戏按"现状（as is）"提供。在适用法律允许的范围内，公司不对本游戏的完整性、特定用途适用性等作出明示或默示的保证。在适用法律允许的最大范围内，公司不对因使用本游戏而产生的间接、附带或特殊损害承担责任。本条款不限制您作为消费者根据适用法律所享有的任何权利。</p>
+
+<h2>9. 条款的变更</h2>
+<p>公司可在必要时修订本条款，并在变更时发布于本页面。变更后如继续使用本游戏，即视为同意修订后的条款。</p>
+
+<h2>10. 准据法</h2>
+<p>本条款依据大韩民国法律解释和适用。</p>
+
+<h2>11. 联系方式</h2>
+<p>联系方式：<a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== 日本語 ===================== -->
+<section class="doc" lang="ja" data-lang="ja">
+<h1>利用規約 — Tiny Defense</h1>
+<p class="meta">施行日：2026年7月20日</p>
+
+<p>本利用規約（以下「本規約」）は、利用者と Tiny Defense（以下「本ゲーム」）の提供者である OneStep（以下「当社」）との間の、本ゲームの利用に関する条件を定めます。本ゲームをインストールまたは実行することにより、利用者は本規約に同意したものとみなされます。同意しない場合は、本ゲームを利用しないでください。</p>
+
+<h2>1. 利用許諾</h2>
+<p>当社は利用者に対し、本ゲームを個人的・非商業的目的で利用できる、譲渡不可・非独占的な利用権を付与します。利用者はアカウント登録なしで本ゲームを利用できます。</p>
+
+<h2>2. 禁止行為</h2>
+<p>利用者は、次の行為をしてはなりません。</p>
+<ul>
+  <li>本ゲームの逆コンパイル・リバースエンジニアリング・ソースの抽出、または無断での複製・配布・二次的著作物の作成</li>
+  <li>チート・マクロ・バグの悪用などにより正常な運営を妨害し、または順位（ランキング）を不正に操作する行為</li>
+  <li>他人の権利を侵害し、または関連法令に違反する行為</li>
+</ul>
+
+<h2>3. 利用者コンテンツ（ニックネーム）</h2>
+<p>ランキング表示のために入力するニックネームは、他のプレイヤーに公開的に表示されます。利用者は、暴言・誹謗中傷・差別・なりすまし・広告など不適切なニックネームを使用してはなりません。当社は、不適切と判断したニックネームや記録を事前の通知なく修正または削除することがあります。</p>
+
+<h2>4. 広告およびアプリ内課金</h2>
+<p>本ゲームは無料で提供され、Google AdMob を通じて広告が表示されます。利用者は「広告除去」アプリ内商品（非消費型）を購入して広告を除去できます。すべての決済は Google Play または App Store を通じて処理され、返金・キャンセルは各ストアのポリシーに従います。アプリ内商品はゲーム内でのみ使用されるものであり、現金的価値や実物的価値を持ちません。</p>
+
+<h2>5. ゲームデータ</h2>
+<p>本ゲームの進行データと設定は、クラウドセーブ（同期）機能を通じて保存されることがあります。利用者は、ゲーム内の設定画面にある「データ削除」機能により、いつでもご自身のクラウド・端末保存データを削除できます。データの収集・利用については<a href="privacy-policy.html">プライバシーポリシー</a>に従います。</p>
+
+<h2>6. 知的財産権</h2>
+<p>本ゲームおよびそれに含まれるグラフィック・サウンド・コード・商標など一切の知的財産権は、当社または正当な権利者に帰属します。本規約は、上記の利用許諾以外に、いかなる権利も利用者に移転しません。</p>
+
+<h2>7. サービスの変更・中断</h2>
+<p>当社は本ゲームの内容を改善・変更することがあり、運営上・技術上の必要に応じて、オンライン機能（ランキング・クラウドセーブなど）の全部または一部を変更または中断することがあります。</p>
+
+<h2>8. 保証の否認および責任の制限</h2>
+<p>本ゲームは「現状有姿（as is）」で提供されます。適用法令が認める範囲で、当社は本ゲームの無瑕疵性・特定目的への適合性などについて明示または黙示の保証をしません。適用法令が認める最大限の範囲で、当社は本ゲームの利用により生じた間接的・付随的・特別損害について責任を負いません。本条項は、消費者として利用者が適用法令に基づいて有する権利を制限するものではありません。</p>
+
+<h2>9. 規約の変更</h2>
+<p>当社は必要に応じて本規約を改定することがあり、変更の際は本ページに掲載します。変更後も本ゲームを継続して利用する場合、変更後の規約に同意したものとみなされます。</p>
+
+<h2>10. 準拠法</h2>
+<p>本規約は、大韓民国の法律に従って解釈・適用されます。</p>
+
+<h2>11. お問い合わせ</h2>
+<p>お問い合わせ：<a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== Deutsch ===================== -->
+<section class="doc" lang="de" data-lang="de">
+<h1>Nutzungsbedingungen — Tiny Defense</h1>
+<p class="meta">Gültig ab: 20. Juli 2026</p>
+
+<p>Diese Nutzungsbedingungen (die „Bedingungen") regeln zwischen Ihnen und OneStep (dem „Unternehmen"), das Tiny Defense (das „Spiel") bereitstellt, die Bedingungen für die Nutzung des Spiels. Durch die Installation oder Nutzung des Spiels stimmen Sie diesen Bedingungen zu. Wenn Sie nicht einverstanden sind, nutzen Sie das Spiel nicht.</p>
+
+<h2>1. Lizenz</h2>
+<p>Das Unternehmen gewährt Ihnen eine nicht übertragbare, nicht ausschließliche Lizenz zur Nutzung des Spiels für persönliche, nicht kommerzielle Zwecke. Das Spiel kann ohne Erstellung eines Kontos gespielt werden.</p>
+
+<h2>2. Unzulässiges Verhalten</h2>
+<p>Sie dürfen nicht:</p>
+<ul>
+  <li>das Spiel dekompilieren, zurückentwickeln, Quellcode daraus extrahieren oder unbefugte Kopien, Verbreitungen oder abgeleitete Werke davon erstellen;</li>
+  <li>Cheats, Makros oder Bug-Exploits verwenden oder anderweitig den normalen Betrieb stören oder die Ranglistenplatzierungen unfair manipulieren;</li>
+  <li>die Rechte anderer verletzen oder gegen geltendes Recht verstoßen.</li>
+</ul>
+
+<h2>3. Nutzerinhalte (Spitzname)</h2>
+<p>Der Spitzname, den Sie für die Anzeige in der Bestenliste eingeben, wird anderen Spielern öffentlich angezeigt. Sie dürfen keine unangemessenen Spitznamen verwenden (Beleidigungen, Verleumdung, Hass, Identitätsvortäuschung, Werbung usw.). Das Unternehmen kann Spitznamen oder Einträge, die es für unangemessen hält, ohne vorherige Ankündigung ändern oder entfernen.</p>
+
+<h2>4. Werbung und In-App-Käufe</h2>
+<p>Das Spiel wird kostenlos bereitgestellt und zeigt Werbung über Google AdMob an. Sie können das nicht verbrauchbare In-App-Produkt „Werbung entfernen" erwerben, um Werbung zu entfernen. Alle Zahlungen werden über Google Play oder den App Store abgewickelt; Rückerstattungen oder Stornierungen richten sich nach den Richtlinien des jeweiligen Stores. In-App-Produkte sind ausschließlich zur Nutzung im Spiel bestimmt und haben keinen Bargeld- oder realen Wert.</p>
+
+<h2>5. Spieldaten</h2>
+<p>Ihr Spielfortschritt und Ihre Einstellungen können über die Cloud-Speicherfunktion (Synchronisierung) gespeichert werden. Sie können Ihre Cloud- und Gerätedaten jederzeit über die Funktion „Daten löschen" im Einstellungsbildschirm des Spiels löschen. Die Erhebung und Nutzung von Daten richtet sich nach unserer <a href="privacy-policy.html">Datenschutzerklärung</a>.</p>
+
+<h2>6. Geistiges Eigentum</h2>
+<p>Alle geistigen Eigentumsrechte am Spiel, einschließlich Grafik, Ton, Code und Marken, liegen beim Unternehmen oder seinen Lizenzgebern. Diese Bedingungen übertragen Ihnen außer der oben gewährten Lizenz keine Rechte.</p>
+
+<h2>7. Änderung oder Einstellung des Dienstes</h2>
+<p>Das Unternehmen kann das Spiel verbessern oder ändern und dessen Online-Funktionen (Bestenliste, Cloud-Speicher usw.) ganz oder teilweise aus betrieblichen oder technischen Gründen ändern oder einstellen.</p>
+
+<h2>8. Haftungsausschluss und Haftungsbeschränkung</h2>
+<p>Das Spiel wird „wie besehen" (as is) bereitgestellt. Soweit gesetzlich zulässig, schließt das Unternehmen ausdrückliche und stillschweigende Gewährleistungen aus, einschließlich der Mängelfreiheit und der Eignung für einen bestimmten Zweck. Soweit gesetzlich maximal zulässig, haftet das Unternehmen nicht für indirekte, beiläufige oder besondere Schäden, die aus der Nutzung des Spiels entstehen. Diese Bedingungen beschränken keine Rechte, die Ihnen als Verbraucher nach geltendem Recht zustehen.</p>
+
+<h2>9. Änderungen dieser Bedingungen</h2>
+<p>Das Unternehmen kann diese Bedingungen bei Bedarf überarbeiten und Änderungen auf dieser Seite veröffentlichen. Die fortgesetzte Nutzung des Spiels nach Änderungen gilt als Annahme der überarbeiteten Bedingungen.</p>
+
+<h2>10. Anwendbares Recht</h2>
+<p>Diese Bedingungen unterliegen dem Recht der Republik Korea und werden nach diesem ausgelegt.</p>
+
+<h2>11. Kontakt</h2>
+<p>Kontakt: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== Français ===================== -->
+<section class="doc" lang="fr" data-lang="fr">
+<h1>Conditions d'utilisation — Tiny Defense</h1>
+<p class="meta">Date d'effet : 20 juillet 2026</p>
+
+<p>Les présentes conditions d'utilisation (les « Conditions ») régissent, entre vous et OneStep (la « Société ») qui fournit Tiny Defense (le « Jeu »), les modalités d'utilisation du Jeu. En installant ou en utilisant le Jeu, vous acceptez les présentes Conditions. Si vous n'êtes pas d'accord, n'utilisez pas le Jeu.</p>
+
+<h2>1. Licence</h2>
+<p>La Société vous accorde une licence non transférable et non exclusive d'utilisation du Jeu à des fins personnelles et non commerciales. Le Jeu peut être utilisé sans créer de compte.</p>
+
+<h2>2. Comportements interdits</h2>
+<p>Vous ne devez pas :</p>
+<ul>
+  <li>décompiler, désosser, extraire le code source du Jeu, ni en réaliser des copies, distributions ou œuvres dérivées non autorisées ;</li>
+  <li>utiliser des triches, des macros ou des exploits de bugs, ni perturber de toute autre manière le fonctionnement normal ou manipuler injustement le classement ;</li>
+  <li>porter atteinte aux droits d'autrui ou enfreindre la loi applicable.</li>
+</ul>
+
+<h2>3. Contenu utilisateur (pseudo)</h2>
+<p>Le pseudo que vous saisissez pour l'affichage au classement est visible publiquement par les autres joueurs. Vous ne devez pas utiliser de pseudos inappropriés (grossièretés, diffamation, haine, usurpation d'identité, publicité, etc.). La Société peut modifier ou supprimer sans préavis les pseudos ou enregistrements qu'elle juge inappropriés.</p>
+
+<h2>4. Publicités et achats intégrés</h2>
+<p>Le Jeu est fourni gratuitement et affiche des publicités via Google AdMob. Vous pouvez acheter le produit intégré non consommable « Supprimer les publicités » pour retirer les publicités. Tous les paiements sont traités via Google Play ou l'App Store, et les remboursements ou annulations suivent les politiques de la boutique concernée. Les produits intégrés sont destinés à un usage au sein du Jeu uniquement et n'ont aucune valeur monétaire ou réelle.</p>
+
+<h2>5. Données de jeu</h2>
+<p>La progression et les paramètres du Jeu peuvent être conservés via la fonction de sauvegarde cloud (synchronisation). Vous pouvez supprimer à tout moment vos données stockées dans le cloud et sur l'appareil à l'aide de la fonction « Supprimer les données » de l'écran des paramètres du Jeu. La collecte et l'utilisation des données sont régies par notre <a href="privacy-policy.html">politique de confidentialité</a>.</p>
+
+<h2>6. Propriété intellectuelle</h2>
+<p>Tous les droits de propriété intellectuelle relatifs au Jeu, y compris les graphismes, les sons, le code et les marques, appartiennent à la Société ou à ses concédants. Les présentes Conditions ne vous transfèrent aucun droit autre que la licence accordée ci-dessus.</p>
+
+<h2>7. Modification ou interruption du service</h2>
+<p>La Société peut améliorer ou modifier le Jeu et peut modifier ou interrompre tout ou partie de ses fonctionnalités en ligne (classement, sauvegarde cloud, etc.) selon les besoins opérationnels ou techniques.</p>
+
+<h2>8. Exclusion de garanties et limitation de responsabilité</h2>
+<p>Le Jeu est fourni « en l'état » (as is). Dans la mesure permise par la loi applicable, la Société exclut les garanties expresses et implicites, y compris d'intégrité et d'adéquation à un usage particulier. Dans toute la mesure permise par la loi applicable, la Société n'est pas responsable des dommages indirects, accessoires ou spéciaux résultant de l'utilisation du Jeu. Aucune disposition des présentes Conditions ne limite les droits dont vous disposez en tant que consommateur en vertu de la loi applicable.</p>
+
+<h2>9. Modifications des présentes Conditions</h2>
+<p>La Société peut réviser les présentes Conditions si nécessaire et publiera les modifications sur cette page. La poursuite de l'utilisation du Jeu après des modifications vaut acceptation des Conditions révisées.</p>
+
+<h2>10. Droit applicable</h2>
+<p>Les présentes Conditions sont régies par le droit de la République de Corée et interprétées conformément à celui-ci.</p>
+
+<h2>11. Contact</h2>
+<p>Contact : <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== Español ===================== -->
+<section class="doc" lang="es" data-lang="es">
+<h1>Términos de servicio — Tiny Defense</h1>
+<p class="meta">Fecha de entrada en vigor: 20 de julio de 2026</p>
+
+<p>Los presentes términos de servicio (los «Términos») rigen, entre usted y OneStep (la «Empresa») que proporciona Tiny Defense (el «Juego»), las condiciones de uso del Juego. Al instalar o utilizar el Juego, usted acepta estos Términos. Si no está de acuerdo, no utilice el Juego.</p>
+
+<h2>1. Licencia</h2>
+<p>La Empresa le concede una licencia intransferible y no exclusiva para usar el Juego con fines personales y no comerciales. El Juego puede utilizarse sin crear una cuenta.</p>
+
+<h2>2. Conductas prohibidas</h2>
+<p>Usted no debe:</p>
+<ul>
+  <li>descompilar, aplicar ingeniería inversa, extraer el código fuente del Juego, ni realizar copias, distribuciones u obras derivadas no autorizadas;</li>
+  <li>usar trucos, macros o exploits de errores, ni interferir de otro modo en el funcionamiento normal o manipular injustamente la clasificación;</li>
+  <li>infringir los derechos de terceros o vulnerar la legislación aplicable.</li>
+</ul>
+
+<h2>3. Contenido del usuario (apodo)</h2>
+<p>El apodo que introduce para mostrarse en la clasificación es visible públicamente para otros jugadores. No debe usar apodos inapropiados (groserías, difamación, odio, suplantación de identidad, publicidad, etc.). La Empresa puede modificar o eliminar sin previo aviso los apodos o registros que considere inapropiados.</p>
+
+<h2>4. Anuncios y compras integradas</h2>
+<p>El Juego se ofrece de forma gratuita y muestra anuncios a través de Google AdMob. Puede comprar el producto integrado no consumible «Eliminar anuncios» para retirar la publicidad. Todos los pagos se procesan a través de Google Play o App Store, y los reembolsos o cancelaciones se rigen por las políticas de la tienda correspondiente. Los productos integrados son solo para uso dentro del Juego y no tienen valor en efectivo ni valor real.</p>
+
+<h2>5. Datos del juego</h2>
+<p>El progreso y los ajustes del Juego pueden conservarse mediante la función de guardado en la nube (sincronización). Puede eliminar en cualquier momento sus datos almacenados en la nube y en el dispositivo mediante la función «Eliminar datos» de la pantalla de ajustes del Juego. La recopilación y el uso de los datos se rigen por nuestra <a href="privacy-policy.html">política de privacidad</a>.</p>
+
+<h2>6. Propiedad intelectual</h2>
+<p>Todos los derechos de propiedad intelectual del Juego, incluidos los gráficos, el sonido, el código y las marcas, pertenecen a la Empresa o a sus licenciantes. Estos Términos no le transfieren ningún derecho distinto de la licencia concedida anteriormente.</p>
+
+<h2>7. Cambios o interrupción del servicio</h2>
+<p>La Empresa puede mejorar o modificar el Juego y puede modificar o interrumpir la totalidad o parte de sus funciones en línea (clasificación, guardado en la nube, etc.) según las necesidades operativas o técnicas.</p>
+
+<h2>8. Exención de garantías y limitación de responsabilidad</h2>
+<p>El Juego se proporciona «tal cual» (as is). En la medida permitida por la legislación aplicable, la Empresa excluye las garantías expresas e implícitas, incluidas las de integridad y de idoneidad para un fin determinado. En la máxima medida permitida por la legislación aplicable, la Empresa no será responsable de los daños indirectos, incidentales o especiales derivados del uso del Juego. Nada en estos Términos limita los derechos que le corresponden como consumidor conforme a la legislación aplicable.</p>
+
+<h2>9. Cambios en estos Términos</h2>
+<p>La Empresa puede revisar estos Términos cuando sea necesario y publicará los cambios en esta página. El uso continuado del Juego tras los cambios constituye la aceptación de los Términos revisados.</p>
+
+<h2>10. Legislación aplicable</h2>
+<p>Estos Términos se rigen e interpretan de acuerdo con las leyes de la República de Corea.</p>
+
+<h2>11. Contacto</h2>
+<p>Contacto: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<!-- ===================== Русский ===================== -->
+<section class="doc" lang="ru" data-lang="ru">
+<h1>Условия использования — Tiny Defense</h1>
+<p class="meta">Дата вступления в силу: 20 июля 2026 г.</p>
+
+<p>Настоящие условия использования («Условия») регулируют между вами и OneStep («Компания»), предоставляющей Tiny Defense («Игра»), условия использования Игры. Устанавливая или запуская Игру, вы соглашаетесь с настоящими Условиями. Если вы не согласны, не используйте Игру.</p>
+
+<h2>1. Лицензия</h2>
+<p>Компания предоставляет вам непередаваемую неисключительную лицензию на использование Игры в личных некоммерческих целях. В Игру можно играть без создания учётной записи.</p>
+
+<h2>2. Запрещённые действия</h2>
+<p>Вам запрещается:</p>
+<ul>
+  <li>декомпилировать, реконструировать, извлекать исходный код Игры, а также создавать несанкционированные копии, распространять её или создавать производные произведения;</li>
+  <li>использовать читы, макросы или эксплойты ошибок, иным образом нарушать нормальную работу или недобросовестно манипулировать позициями в таблице лидеров;</li>
+  <li>нарушать права других лиц или применимое законодательство.</li>
+</ul>
+
+<h2>3. Пользовательский контент (никнейм)</h2>
+<p>Никнейм, который вы вводите для отображения в таблице лидеров, публично виден другим игрокам. Запрещается использовать недопустимые никнеймы (оскорбления, клевету, разжигание ненависти, выдачу себя за других, рекламу и т. п.). Компания может без предварительного уведомления изменять или удалять никнеймы или записи, которые сочтёт недопустимыми.</p>
+
+<h2>4. Реклама и встроенные покупки</h2>
+<p>Игра предоставляется бесплатно и показывает рекламу через Google AdMob. Вы можете приобрести непотребляемый встроенный продукт «Убрать рекламу», чтобы отключить рекламу. Все платежи обрабатываются через Google Play или App Store, а возвраты и отмены осуществляются в соответствии с политикой соответствующего магазина. Встроенные продукты предназначены только для использования в Игре и не имеют денежной или реальной ценности.</p>
+
+<h2>5. Игровые данные</h2>
+<p>Прогресс и настройки Игры могут сохраняться через функцию облачного сохранения (синхронизации). Вы можете в любой момент удалить свои данные в облаке и на устройстве с помощью функции «Удалить данные» на экране настроек Игры. Сбор и использование данных регулируются нашей <a href="privacy-policy.html">политикой конфиденциальности</a>.</p>
+
+<h2>6. Интеллектуальная собственность</h2>
+<p>Все права интеллектуальной собственности в Игре, включая графику, звук, код и товарные знаки, принадлежат Компании или её лицензиарам. Настоящие Условия не передают вам никаких прав, кроме предоставленной выше лицензии.</p>
+
+<h2>7. Изменение или прекращение сервиса</h2>
+<p>Компания может улучшать или изменять Игру, а также изменять или прекращать полностью или частично её онлайн-функции (таблица лидеров, облачное сохранение и т. п.) по операционным или техническим причинам.</p>
+
+<h2>8. Отказ от гарантий и ограничение ответственности</h2>
+<p>Игра предоставляется «как есть» (as is). В пределах, допускаемых применимым законодательством, Компания отказывается от прямых и подразумеваемых гарантий, включая гарантии исправности и пригодности для определённой цели. В максимальной степени, допускаемой применимым законодательством, Компания не несёт ответственности за косвенные, случайные или особые убытки, возникшие в результате использования Игры. Ничто в настоящих Условиях не ограничивает права, которыми вы обладаете как потребитель согласно применимому законодательству.</p>
+
+<h2>9. Изменения настоящих Условий</h2>
+<p>Компания может при необходимости пересматривать настоящие Условия и публиковать изменения на этой странице. Продолжение использования Игры после изменений означает согласие с пересмотренными Условиями.</p>
+
+<h2>10. Применимое право</h2>
+<p>Настоящие Условия регулируются и толкуются в соответствии с законодательством Республики Корея.</p>
+
+<h2>11. Контакты</h2>
+<p>Контакты: <a href="mailto:chunsanet@gmail.com">chunsanet@gmail.com</a></p>
+</section>
+
+<script>
+(function () {
+  var langs = ["ko", "en", "zh", "ja", "de", "fr", "es", "ru"];
+  function show(code) {
+    langs.forEach(function (l) {
+      var sec = document.querySelector('section[data-lang="' + l + '"]');
+      var btn = document.querySelector('button[data-target="' + l + '"]');
+      if (sec) sec.style.display = (l === code) ? "block" : "none";
+      if (btn) btn.classList.toggle("active", l === code);
+    });
+    try { localStorage.setItem("td_legal_lang", code); } catch (e) {}
+  }
+  function pick() {
+    try {
+      var saved = localStorage.getItem("td_legal_lang");
+      if (saved && langs.indexOf(saved) >= 0) return saved;
+    } catch (e) {}
+    var nav = (navigator.language || "en").toLowerCase();
+    for (var i = 0; i < langs.length; i++) {
+      if (nav.indexOf(langs[i]) === 0) return langs[i];
+    }
+    return "en";
+  }
+  var buttons = document.querySelectorAll(".langbar button");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      show(this.getAttribute("data-target"));
+    });
+  }
+  show(pick());
+})();
+</script>
 
 </body>
 </html>
